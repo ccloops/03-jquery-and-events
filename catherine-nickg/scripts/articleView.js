@@ -45,19 +45,35 @@ articleView.handleAuthorFilter = function() {
       $('#articles').find('article').hide();
       $(`article[data-author='${$show}']`).fadeIn(750);
     } else {
-      // TODO: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
-      $('article.template').hide();
-      $('#articles').show();
+      // DONE: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
+      $('#articles').find('article').show();
+      $('.template').hide();
     }
     $('#category-filter').val('');
   });
 };
 
 articleView.handleCategoryFilter = function() {
-  // TODO: Just like we do for #author-filter above, we should handle change events on the #category-filter element.
+  // DONE: Just like we do for #author-filter above, we should handle change events on the #category-filter element.
   // When an option with a value is selected, hide all the articles, then reveal the matches.
   // When the blank (default) option is selected, show all the articles, except for the template.
   // Be sure to reset the #author-filter while you are at it!
+  $('#category-filter').on('change', function() {
+    if ($(this).val()) {
+
+      let $show = $(this).val()
+      $('#articles').find('article').hide();
+      $(`article[data-category='${$show}']`).fadeIn(750);
+
+    } else {
+
+      $('#articles').find('article').show();
+      $('.template').hide();
+    }
+
+    $('#author-filter').val('');
+
+  });
 
 };
 
