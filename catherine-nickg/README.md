@@ -29,7 +29,7 @@ We approached this design with a mobile first mindset. Then we used media querie
 
 10-26-17 10:00AM - We then switched to Nick G as driver and Catherine as navigator and completed the set up of the author and category filters.
 
-10-26-17 11:20AM - We then switched to Catherine as driver and Nick G as navigator to complete the handleMainNav TODO file and update the README.
+10-26-17 11:20AM - We then switched to Catherine as driver and Nick G as navigator to complete the remaining TODO items and update the README.
 
 ## Credits and Collaborations
 * Code Fellows - https://www.codefellows.org/
