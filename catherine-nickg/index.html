@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Lab 3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <link rel="stylesheet" href="vendors/styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="styles/layout.css">
@@ -20,31 +20,32 @@
       <h2>The shocking power of static pages</h2>
     </section>
     <nav class="main-nav">
-      <div class="icon-menu"></div>
+      <div class="icon-menu">
       <ul>
         <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
         <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
         <li><a href="http://twitter.com/brookr" target="_blank" class="icon-twitter3"> Twitter</a></li>
         <li><a href="http://github.com/brookr" target="_blank" class="icon-github"> GitHub</a></li>
       </ul>
+      </div>
     </nav>
   </header>
   <main>
+    <div>
+      <ul id="filters">
+        <li>
+          <select id="author-filter">
+            <option value="">-- Filter by Authors --</option>
+          </select>
+        </li>
+        <li>
+          <select id="category-filter">
+            <option value="">-- Filter by Categories --</option>
+          </select>
+        </li>
+      </ul>
+    </div>
     <section id="articles" class="tab-content">
-      <div>
-        <ul id="filters">
-          <li>
-            <select id="author-filter">
-              <option value="">-- Filter by Authors --</option>
-            </select>
-          </li>
-          <li>
-            <select id="category-filter">
-              <option value="">-- Filter by Categories --</option>
-            </select>
-          </li>
-        </ul>
-      </div>
       <article class="template" data-category="cat">
         <header>
           <h1>Title</h1>
@@ -77,9 +78,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="scripts/blogArticles.js"></script>
   <script src="scripts/article.js"></script>
-  <!-- TODO: Link our new script file in. -->
+  <!-- DONE: Link our new script file in. -->
+  <script src="scripts/articleView.js"></script>
 
   <!-- COMMENT: Explain the ordering of your script files. -->
-  <!-- PUT YOUR RESPONSE HERE -->
+  <!-- The jQuery is required in first because it is being used by proceeding js files. The blogArticles.js file contains data that is being used by article and articleView js files.  -->
 </body>
 </html>
